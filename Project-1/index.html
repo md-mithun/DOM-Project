@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #div{
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s;
+        }
+        .btn{
+            width: 120px;
+            height: 45px;
+            border-radius: 10px;
+            border: none;
+            font-size: 1.2rem;
+            background: rgb(16, 99, 26);
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s;
+            
+        }
+        .btn:hover{
+            box-shadow: 4px 4px 8px rgb(0, 0, 0);
+            font-weight: bolder;
+        }
+    </style>
     <title>DOM</title>
 </head>
 <body>
     <div id="div">
-        <button id="btn">Colour</button>
+        <button id="btn" class="btn">Colour</button>
     </div>
+
+    <script src="./index.js"></script>
 </body>
 </html>
