@@ -1,5 +1,8 @@
 const btn = document.getElementById('btn');
-btn.addEventListener('click', createColor);
+btn.addEventListener('mousedown', function(){
+    btn.classList.add('fw');
+    createColor();
+});
 
 
 function createColor() {
@@ -16,3 +19,6 @@ function appliedColor(bg) {
     const div = document.getElementById('div');
     div.style.background = bg;
 }
+btn.addEventListener('mouseup',function(){
+    btn.classList.remove('fw');
+})
