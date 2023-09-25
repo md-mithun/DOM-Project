@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.toast {
+    position: fixed;
+    z-index: 999;
+    width: 160px;
+    padding: 10px;
+    top: 3rem;
+    right: 1rem;
+    background-color: rgb(82, 238, 129);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+.toast::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px 0 0 8px;
+    width: 5.6px;
+    height: 100%;
+    background-color: rgb(221, 90, 90);
+}
+.toast::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5.6px;
+    height: 100%;
+    border-radius:0 8px 8px 0;
+    background-color: rgb(221, 90, 90);
+}
+.toast-animation-in{
+    animation: toast-in 0.5s ease-in ;
+}
+.toast-animation-out{
+    animation: toast-out 0.5s ease-in ;
+}
+@keyframes toast-in {
+    0%{
+        right: calc(-10rem);
+    }
+    100%{
+        right: 1rem;
+    }
+}
+@keyframes toast-out {
+    0%{
+        right: 1rem;
+    }
+    100%{
+        right: calc(-10rem);
+    }
+}
+
+#output, #copy-btn, #color-btn{
+    text-align: center;
+    padding:5px;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+#output{
+    width: 150px;
+}
+#copy-btn{
+    width: 100px;
+    text-align: center;
+    padding:5px;
+    font-size: 1rem;
+    border-color: aliceblue;
+    cursor: pointer;
+}
+#color-btn{
+    width: 165px;
+    margin-top: 10px;
+    border-color: white;
+    cursor: pointer;
+}
