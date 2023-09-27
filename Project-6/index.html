@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic color</title>
+</head>
+
+<body>
+    <div class="container">
+        <section class="top-section flex-space-between">
+            <h1>Display color</h1>
+            <button id="randomColorBtn" onclick="randomColor()">Random Color</button>
+        </section>
+
+        <section class="color-display-section">
+            <div class="color-display" id="color-display"></div>
+        </section>
+
+        <section class="copy-section">
+            <div class="mode flex-space-between">
+                <div class="mode-container">
+                    <label for="name">Hex</label>
+                    <input type="radio" name="copy-mode" onclick="handleClick(this)" id="copy-mode-hex" value="hex">
+                </div>
+                <div class="mode-container">
+                    <label for="name">RGB</label>
+                    <input type="radio" name="copy-mode" onclick="handleClick(this);" id="copy-mode-rgb" value="rgb">
+                </div>
+            </div>
+            <div>
+                <button class="copy-btn" id="copy-btn">Copy to clipboard</button>
+            </div>
+        </section>
+
+        <section class="code-display-section flex-space-between">
+            <div class="color-mode-name flex-space-between">
+                <h5>HEX</h5>
+                <h5>RGB</h5>
+            </div>
+            <div class="color-code-display flex-space-between">
+                <input class="color-code-out" value="#7A31480" type="text" name="hex" id="hex-out">
+                <input class="color-code-out" value="rgb(128,128,128)" type="text" name="rgb" id="rgb-out" disabled>
+            </div>
+        </section>
+
+        <section class="color-range-section flex-space-between">
+            <div class="decimal-color-range flex-space-between">
+                <label for="red" id="red-decimal">128</label>
+                <label for="green" id="green-decimal">128</label>
+                <label for="blue" id="blue-decimal">128</label>
+            </div>
+            <div class="color-range flex-space-between">
+                <input type="range" min="0" max="255" name="slider" id="red-slider">
+                <input type="range" min="0" max="255" name="slider" id="green-slider">
+                <input type="range" min="0" max="255" name="slider" id="blue-slider">
+            </div>
+        </section>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

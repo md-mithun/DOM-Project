@@ -52,6 +52,13 @@
 .toast-animation-out{
     animation: toast-out 0.5s ease-in ;
 }
+.automatic-toast-delete-animation{
+    animation: toast-delete 1.5s  ease-out;
+}
+@keyframes toast-delete {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
 @keyframes toast-in {
     0%{
         right: calc(-10rem);

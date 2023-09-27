@@ -45,7 +45,15 @@ function toastMessage(message) {
     toast = document.createElement('div');
     toast.innerText = `${message} copied`;
     toast.classList = 'toast toast-animation-in';
-    //remove toast by clicked in
+    // remove toast message after 2second
+    setTimeout(function () {
+        toast.classList.add('automatic-toast-delete-animation');
+        toast.addEventListener('animationend', function () {
+            toast.remove();
+        }
+        )
+    }, 2000);
+    //remove toast by click
     toast.addEventListener('click', function () {
         toast.classList.remove('toast-animation-in');
         toast.classList.add('toast-animation-out');

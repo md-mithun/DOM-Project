@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;box-sizing: border-box;
+}
+/* global-class */
+.flex-space-between{
+    display: flex;
+    justify-content: space-between;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(20, 5, 47);
+}
+.container{
+    width: 800px;
+    height: 430px;
+    background-color: rgb(185, 206, 211);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.top-section> h1{
+    font-family: cursive;
+    font-weight: bold;
+}
+
+.top-section > #randomColorBtn{
+    width: 120px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.color-display-section{
+    padding: 20px;
+    margin: 20px 0;
+}
+.color-display-section > .color-display{
+    width: 100%;
+    height: 120px;
+    background-color: rgb(128, 128, 128);
+    border-radius: 5px;
+    border: 1px solid;
+}
+.copy-section{
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mode-container{
+    margin: 0 15px;
+    font-size: 1.2rem;    
+}
+.copy-section .copy-btn{
+    width: 120px;
+    padding: 5px;
+    cursor: pointer;
+}
+.copy-section .copy-btn:hover{
+    background-color: black;
+    color: rgba(255, 255, 255, 0.656);
+}
+.code-display-section{
+flex-direction: column;
+margin: 20px 0;
+}
+
+.color-range-section{
+    flex-direction: column;
+    margin: 20px 0;
+}
+input[type='range']{
+    width: 220px;
+}
+input[type='radio']{
+    cursor: pointer;
+}
+
+.color-code-out{
+    padding: 4px;
+    border-radius: 4px;
+}
+
+/* oast-message */
+.toast {
+    position: fixed;
+    z-index: 999;
+    min-width: 160px;
+    padding: 10px;
+    top: 3rem;
+    right: 1rem;
+    background-color: rgb(82, 238, 129);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.toast::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px 0 0 8px;
+    width: 5.6px;
+    height: 100%;
+    background-color: rgb(221, 90, 90);
+}
+.toast::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5.6px;
+    height: 100%;
+    border-radius:0 8px 8px 0;
+    background-color: rgb(221, 90, 90);
+}
+.toast-animation-in{
+    animation: toast-in 0.5s ease-in ;
+}
+.toast-animation-out{
+    animation: toast-out 0.5s ease-in ;
+}
+.automatic-toast-delete-animation{
+    animation: toast-delete 1.5s  ease-out;
+}
+@keyframes toast-delete {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+@keyframes toast-in {
+    0%{
+        right: calc(-10rem);
+    }
+    100%{
+        right: 1rem;
+    }
+}
+@keyframes toast-out {
+    0%{
+        right: 1rem;
+    }
+    100%{
+        right: calc(-10rem);
+    }
+}
