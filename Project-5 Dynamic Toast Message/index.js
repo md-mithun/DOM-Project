@@ -23,6 +23,7 @@ function setDivColor(bgColor) {
     mainDiv.style.background = bgColor;
 }
 
+
 //copy color code 
 copyButton.addEventListener('click', function () {
     const colorCode = outPutTextBox.value;
