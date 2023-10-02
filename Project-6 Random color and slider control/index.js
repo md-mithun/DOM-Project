@@ -57,7 +57,7 @@ function setSliderValue(red, green, blue) {
 function changeColorBySlider() {
     sliders.forEach(slide => {
         slide.addEventListener('change', function () {
-            const red = (redSlider.value).toString(16);
+            const red = redSlider.value;
             const green = greenSlider.value;
             const blue = blueSlider.value;
             generateColor(red, green, blue);
