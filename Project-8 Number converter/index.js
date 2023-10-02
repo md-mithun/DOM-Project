@@ -2,6 +2,7 @@
 const decimal = document.getElementById('dec');
 const binary = document.getElementById('bin');
 const octal = document.getElementById('oct');
+const hexaDecimal = document.getElementById('hex');
 
 //set initial toast message equal to null
 toast = null;
@@ -34,7 +35,7 @@ function binaryValidation(bin) {
 //check hexa-decimal validation
 function hexaDecimalValidation(hex) {
     if (/^[0-9a-fA-F]+$/i.test(hex)) {
-        return true
+        return true;
     }
     else {
         emptyNumberChecked('');//set all empty string
@@ -49,7 +50,7 @@ function octaValidation(octal) {
     }
     else {
         emptyNumberChecked('');//set all empty string
-        errorMessage(`${octal} is not valid octal number`)
+        errorMessage(`${octal} is not valid octal number`);
         return false;
     }
 }
