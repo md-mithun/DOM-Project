@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter by value</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #000;
+      }
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        height: 40%;
+        background-color: greenyellow;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      h1 {
+        margin-top: 70px;
+      }
+      .action {
+        margin-top: 20px;
+      }
+      input {
+        padding: 5px;
+      }
+      input[type='number'] {
+        width: 160px;
+        height: 25px;
+      }
+      input[type='button'] {
+        height: 40px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="display" id="display">00</h1>
+      <div class="action">
+        <input type="number" placeholder="Increment" id="inc" name="counting" />
+        <input type="button" value="Calculate" onclick="display()" />
+        <input type="number" placeholder="Decrement" id="dec" name="counting" />
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
