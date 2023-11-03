@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo">
+      <img
+        src="#">
+    </div>
+    <div class="header">
+      <h1>to-do app</h1>
+    </div>
+
+    <!-- ------------------- -->
+    <form class="form">
+      <div class="input">
+
+        <label for="newTask">Add New Task</label>
+        <input type="text" name="newTask" id="inputBox">
+      </div>
+      <button type="submit" id="addTask">Add Task</button>
+    </form>
+
+    <!-- ------------------- -->
+    <div class="todoList box">
+      <h2>Incomplete Tasks</h2>
+      <ul id="items" class="incompleteUl">
+        <li>
+          <input onchange="completeTodo(this)" type="checkbox" /><label>Task Name</label>
+        </li>
+        <li>
+          <input onchange="completeTodo(this)" type="checkbox"/><label>Task Name</label>
+        </li>
+        <li>
+          <input onchange="completeTodo(this)" type="checkbox" /><label>Task Name</label>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="complete-task box">
+      <h2>Completed Tasks</h2>
+      <ul id="completeUl">
+        <li >Task Name <button onclick="deleteItem(this)" class="delete">Delete</button></li>
+        <li >Task Name <button onclick="deleteItem(this)" class="delete">Delete</button></li>
+      </ul>
+    </div>
+    <!-- ------------------- -->
+  </div>
+  <script src="./my.js"></script>
+</body>
+
+</html>

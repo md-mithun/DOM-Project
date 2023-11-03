@@ -1,0 +1,118 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: sans-serif;
+}
+body{
+  /* background: #000; */
+  padding: 30px;
+  overflow: hidden;
+}
+.container {
+  background: lightskyblue;
+  padding: 25px;
+  width: 80%;
+  margin: 25px auto;
+  border-radius: 10px;
+  border: 4px solid gray;
+  overflow: hidden;
+}
+.logo{
+  width: 100%;
+}
+.logo img{
+  margin: 0 auto;
+  width: 80px;
+  display: block;
+}
+.header{
+  width: 100%;
+}
+h1,h2{
+  text-align: center;
+  text-transform: uppercase;
+}
+.header h1{
+  margin: 4px;
+  color: rgb(255, 18, 18);
+}
+
+.form{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  background: rgb(255, 255, 255);
+  border-radius: 6px;
+  border: 3px solid rgb(134, 86, 86);
+  padding: 15px;
+}
+.form label{
+  font-size: 24px;
+}
+.form input{
+  width: 280px;
+  height: 25px;
+  padding: 5px 10px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  margin-left: 10px;
+  background: #ffffff;
+  letter-spacing: 1px;
+}
+.form button{
+  border: none;
+  width: 120px;
+  padding: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  color: red;
+  border: 2px solid rgb(134, 86, 86);
+}
+.box{
+  margin-top: 20px;
+  width: 300px;
+  height: auto;
+  background: rgb(255, 255, 255);
+  border-radius: 6px;
+  border: 3px solid rgb(134, 86, 86);
+  padding: 15px;
+}
+
+.todoList{
+  float: left;
+}
+.todoList ul li input{
+  cursor: pointer;
+}
+.todoList>ul>li{
+  margin: 5px;
+  padding: 5px;
+}
+.todoList>ul>li{
+  border-bottom: 1px solid;
+}
+.todoList>ul>li>label{
+margin-left: 5px;
+}
+.complete-task{
+  float: right;
+}
+.complete-task>ul>li{
+  border-bottom: 1px solid;
+  padding: 5px 0;
+  margin: 5px;
+  overflow: hidden;
+}
+.complete-task >ul>li button{
+  float:right;
+  background-color: pink;
+  width: 80px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  height: 25px;
+}
