@@ -3,8 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
 body {
     width: 100%;
     height: 100vh;
@@ -16,19 +14,29 @@ body {
 .container {
     width: 300px;
     height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 100px;
 }
 
 .box {
     position: relative;
-    float: left;
-    width: 100px;
-    height: 100px;
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center;
-    border: 2px solid limegreen;
+    border: 4px solid rgb(25, 11, 180);
     cursor: pointer;
-    background: transparent;
+    animation: border 3s linear infinite;
+}
+
+@keyframes border {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }
 
 .circle::before {
@@ -36,9 +44,8 @@ body {
     content: '';
     width: 50%;
     height: 50%;
-    /* background: #000; */
     border-radius: 50%;
-    border: 3px solid rgb(255, 0, 0);
+    border: 3px solid rgb(255, 0, 0) !important;
     box-shadow: 0 0 30px 5px#0000001a;
 }
 
@@ -47,7 +54,7 @@ body {
     content: '';
     height: 70%;
     width: 3px;
-    background: green;
+    background: rgb(253, 62, 253) !important;
     transform: rotate(45deg);
 }
 
@@ -56,54 +63,51 @@ body {
     content: '';
     height: 70%;
     width: 3px;
-    background: green;
+    background: rgb(253, 62, 253) !important;
     transform: rotate(-45deg);
 }
 
 .box0,
 .box1,
 .box2 {
-    border-top-color: white;
+    border-top-color: white !important;
 }
 
 .box2,
 .box5,
 .box8 {
-    border-right-color: white;
+    border-right-color: white !important;
 }
 
 .box0,
 .box3,
 .box6 {
-    border-left-color: white;
+    border-left-color: white !important;
 }
 
 .box6,
 .box7,
 .box8 {
-    border-bottom-color: white;
+    border-bottom-color: white !important;
 }
 
 
 /* shadow */
-
-
 .circle_shadow::before {
     position: absolute;
     content: '';
     width: 50%;
     height: 50%;
-    /* background: #000; */
     border-radius: 50%;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(0, 0, 0, 0.1);
 }
 
 .cross_shadow::before {
     position: absolute;
     content: '';
     height: 70%;
-    width: 1px;
-    background: gray;
+    width: 3px;
+    background: rgba(0, 0, 0, 0.1);
     transform: rotate(45deg);
 }
 
@@ -111,8 +115,8 @@ body {
     position: absolute;
     content: '';
     height: 70%;
-    width: 1px;
-    background: gray;
+    width: 3px;
+    background: rgba(0, 0, 0, 0.1);
     transform: rotate(-45deg);
 }
 
@@ -124,23 +128,24 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
+    background: rgba(29, 255, 180, 0.3);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: all .3s;
     opacity: 0;
     transform: scale(0);
-    animation: animate 1s linear forwards;
+    animation: animate .5s linear forwards;
 }
+
 @keyframes animate {
-    0%{
+    0% {
         opacity: 0;
         transform: scale(0);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: scale(1);
     }
@@ -150,11 +155,15 @@ body {
     font-size: 6rem;
     font-family: cursive;
     margin-bottom: 10px;
+    text-shadow: 0 0 50px red;
+    color: rgb(255, 202, 95);
+    -webkit-text-stroke: 1px black;
 }
 
 .popup .result {
-    font-size: 4rem;
+    font-size: 2rem;
     margin-bottom: 8px;
+    color: red;
 }
 
 .popup button {
@@ -190,23 +199,20 @@ body {
 
 @media screen and (max-width:600px) {
     .container {
-        width: 210px;
-        height: 210px;
+        width: 180px;
+        height: 180px;
     }
 
     .box {
-
-        width: 70px;
-        height: 70px;
-
+        grid-auto-rows: 60px;
     }
 
     .popup .congrates {
-        font-size: 2rem;
+        font-size: 1.8rem !important;
     }
-    
+
     .popup .result {
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
 
     .popup button {
@@ -215,9 +221,9 @@ body {
         width: 100px;
         height: 30px;
         font-size: .8rem;
-
     }
 }
+
 @media screen and (max-width:850px) {
     .container {
         width: 270px;
@@ -225,16 +231,13 @@ body {
     }
 
     .box {
-
-        width: 90px;
-        height: 90px;
-
+        grid-auto-rows: 90px;
     }
 
     .popup .congrates {
         font-size: 4rem;
     }
-    
+
     .popup .result {
         font-size: 2.5rem;
     }
