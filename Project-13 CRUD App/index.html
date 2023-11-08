@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Crud App</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="myform">
+            <input required id="nameIn" type="text" placeholder="Enter your name">
+            <input required id="rollIn" type="text" placeholder="Enter your roll">
+            <button id="submitBtn" type="submit">Add Student</button>
+        </form>
+
+
+        <table class="lists">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Roll</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="listContainer">
+                <tr id="list">
+                    <td>Mithun</td>
+                    <td>530261</td>
+                    <td class="action">
+                        <i id="" onclick="editItem(id)" class="fa-regular edit fa-pen-to-square"></i>
+                        <i id="" onclick="deleteItem(id)" class="fa-regular delete fa-trash-can"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

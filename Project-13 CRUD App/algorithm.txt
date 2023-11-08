@@ -1,0 +1,33 @@
+**Algorithm for the given code:**
+
+1. Check if the `studentsArray` key exists in local storage. If it does, parse the JSON string into an array and assign it to the `studentsArray` variable. Otherwise, create a new empty array and assign it to the `studentsArray` variable.
+2. Set the `editMode` variable to `null`.
+3. Get references to the `listContainer`, `myform`, `sName`, and `sRoll` HTML elements.
+4. Define a function called `alertMsg()`, which simply prints the given message to the console.
+5. Define a function called `clearInput()`, which clears the values of the `sName` and `sRoll` input fields.
+6. Add an event listener to the `myform` element, so that the `submit` event is handled by the following callback function:
+    * Prevent the default form submission behavior.
+    * Create a new student object based on the values of the `sName` and `sRoll` input fields.
+    * If the `editMode` variable is `null`, add the student object to the `studentsArray` array and update the local storage. Otherwise, update the student object at the index specified by the `editMode` variable.
+    * Update the local storage again, set the `editMode` variable to `null`, change the submit button text to "Add Student", and call the `refresh()` and `clearInput()` functions.
+7. Define a function called `refresh()`, which does the following:
+    * Parse the JSON string in local storage and assign it to the `items` variable.
+    * Create an empty string called `list`.
+    * Iterate over the `items` array and create a new table row for each student. The table row will contain the student's name, roll number, and two action buttons (edit and delete).
+    * Assign the `list` string to the `innerHTML` property of the `listContainer` element.
+8. Define a function called `deleteItem()`, which takes the index of the student to be deleted as a parameter. The function does the following:
+    * Remove the student object at the given index from the `studentsArray` array.
+    * Update the local storage.
+    * Call the `refresh()` function.
+9. Define a function called `editItem()`, which takes the index of the student to be edited as a parameter. The function does the following:
+    * Set the `editMode` variable to the given index.
+    * Set the values of the `sName` and `sRoll` input fields to the name and roll number of the student at the given index, respectively.
+    * Change the submit button text to "Update".
+10. Call the `refresh()` function.
+
+
+
+**Example usage:**
+1. To add a new student, fill in the `sName` and `sRoll` input fields and click the "Add Student" button.
+2. To edit a student, click the edit button next to the student's name. Update the student's information and click the "Update" button.
+3. To delete a student, click the delete button next to the student's name.
