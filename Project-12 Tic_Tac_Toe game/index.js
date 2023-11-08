@@ -87,6 +87,6 @@ function popup(m) {
   let popup = document.getElementById('popup');
   popup.classList.add('popup')
   popup.innerHTML = `<div class="congrates">Congratulations</div>
-  <div class="result">${m} player won the game!</div>
+  <div class="result">Player ${m}'s won the game!</div>
   <button onclick="resetGame()" >Restart game</button>`;
 }
