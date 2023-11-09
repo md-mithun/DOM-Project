@@ -1,4 +1,5 @@
 let turnMode = 'x';
+let count =0;
 const boxes = document.getElementsByClassName('box');
 const winAudio=new Audio('audio/win.mp3');
 const clickAudio=new Audio('audio/click.mp3');
@@ -23,7 +24,8 @@ function addTurn() {
   }
   this.removeEventListener('click', addTurn);
   this.removeEventListener('mouseover', addShadow);
-  checkwin();
+  count++;
+  checkwin(count);
 }
 
 
@@ -45,7 +47,11 @@ function removeShadow() {
 }
 
 
-function checkwin() {
+function checkwin(count) {
+  if(count===9){
+   let x=window.confirm('Game is tie, Do you wants to play again?');
+   if(x){location.reload()} 
+  }
   let winner = '';
   const winningCombinations = [
     [0, 1, 2],
