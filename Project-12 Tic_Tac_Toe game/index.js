@@ -57,7 +57,13 @@ function checkwin() {
     [0, 4, 8],
     [2, 4, 6]
   ];
-  clickAudio.play();
+  if(clickAudio.play()){
+    clickAudio.pause();
+    clickAudio.currentTime=0;
+    clickAudio.play();
+  }else{
+    clickAudio.play();
+  }
   winningCombinations.forEach((e) => {
     if (boxes[e[0]].id === boxes[e[1]].id && boxes[e[1]].id === boxes[e[2]].id) {
       winner = `${boxes[e[0]].id}`
